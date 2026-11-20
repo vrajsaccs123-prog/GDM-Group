@@ -2,319 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ghanshyam Dall Mill</title>
-  <meta name="description" content="Ghanshyam Dall Mill, Indore. Pulses, besan, wheat products and cattle feed, with today's mill rates.">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ghanshyam Dal Mill — Daily Rates</title>
+  <meta name="description" content="Today's rates from Ghanshyam Dal Mill. The list is read live from the mill price sheet.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body data-page="home">
-  <header class="site-header">
-    <div class="topbar">
-      <a class="logo" href="index.html"><span>Ghanshyam</span><strong>Dall Mill</strong></a>
-      <div class="top-meta">
-        <p>
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
-          <span>14-A, 11-A/1-B, Udyog Nagar, Navlakha, Near Chhawani Anaj Mandi, Indore 452001</span>
-        </p>
-        <p>
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
-          <span>82, New Udyog Agrawal Udyog Nagar, Nemawar Road, Indore 452020</span>
-        </p>
-        <p>
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z"/></svg>
-          <span>
-            <a href="tel:+919893055565">+91-98930-55565</a><br>
-            <a href="tel:+919926500065">+91-99265-00065</a><br>
-            <a href="mailto:contact@ghanshyamdallmill.com">contact@ghanshyamdallmill.com</a>
-          </span>
-        </p>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <div class="masthead-inner wrap">
+        <h1 class="wordmark">Ghanshyam Dal Mill</h1>
+        <div class="wordmark-rule"></div>
       </div>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
-    </div>
-    <nav class="main-nav" aria-label="Primary">
-      <a href="index.html" data-nav-id="home">Home</a>
-      <a href="about.html" data-nav-id="about">About Us</a>
-      <a href="products.html" data-nav-id="products">Product</a>
-      <a href="downloads.html" data-nav-id="downloads">Downloads</a>
-      <a href="contact.html" data-nav-id="contact">Contact Us</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <div class="hero-slides">
-      <article class="slide is-active">
-        <h1>Wheat</h1>
-        <p>With the strong support of our adept team of professionals, we are offering a range of superior quality chakki fresh atta.</p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="about.html">About</a>
-          <a class="btn btn-white" href="products.html">Our Products</a>
+      <div class="masthead-bar">
+        <nav class="masthead-nav wrap" aria-label="Sections">
+          <a class="nav-link" href="/" data-nav="today">Today's Rates</a>
+          <a class="nav-link" href="/history" data-nav="history">Rate History</a>
+        </nav>
+      </div>
+    </header>
+    <div class="stickybar" aria-hidden="true"><span id="sticky-label"></span></div>
+    <div class="main">
+      <main class="wrap" id="app">
+        <div class="dateline">
+          <span class="eyebrow">Latest rates</span>
+          <span class="dateline-date">Reading the sheet…</span>
         </div>
-      </article>
-      <article class="slide">
-        <h1>Corn</h1>
-        <p>We are one of the leading processors and suppliers of excellent quality products under our own brands.</p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="about.html">About</a>
-          <a class="btn btn-white" href="products.html">Our Products</a>
-        </div>
-      </article>
-      <article class="slide">
-        <h1>Chickpeas</h1>
-        <p>Kabuli, black and green chickpeas, cleaned and graded for trade and for the kitchen.</p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="about.html">About</a>
-          <a class="btn btn-white" href="products.html">Our Products</a>
-        </div>
-      </article>
-      <article class="slide">
-        <h1>Pulse</h1>
-        <p>North, south, east and west, every Indian kitchen is stocked with pulses. We mill them in a range of brands and packings.</p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="about.html">About</a>
-          <a class="btn btn-white" href="downloads.html">Today's Rates</a>
-        </div>
-      </article>
-      <div class="slide-nav">
-        <button type="button" data-slide-prev aria-label="Previous">‹</button>
-        <button type="button" data-slide-next aria-label="Next">›</button>
-      </div>
+      </main>
     </div>
-    <aside class="hero-rates" data-rates>
-      <p class="kicker">Today's rates</p>
-      <h2 data-rate-date>Loading sheet…</h2>
-      <ul id="hero-rates-list"></ul>
-      <a class="more" href="downloads.html">Full rate list</a>
-    </aside>
-  </section>
-
-  <section class="section">
-    <div class="wrap split">
-      <div class="collage">
-        <img src="assets/wheat.jpg" alt="Wheat grain">
-        <img src="assets/corn.jpg" alt="Corn">
-        <img src="assets/chickpeas.jpg" alt="Chickpeas">
-      </div>
-      <div>
-        <h2 class="section-title" style="text-align:left">We Serve</h2>
-        <p>Our products are manufactured and produced in high-quality plants using advanced technology. It is our desire to provide products that are safe and healthy for every home. Our products are untouched by hand, nutrition enriched, and undergo stringent quality checks at all levels to meet a high standard of quality, durability and consistency, without compromising on taste.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <h2 class="section-title">Major Sector In Which We Deal</h2>
-      <div class="sectors">
-        <a class="sector" href="products.html#wheat">
-          <img src="assets/wheat.jpg" alt="">
-          <h3>Wheat</h3>
-          <p>Wheat is a grass widely cultivated for its seed, a cereal grain which is a worldwide staple food.</p>
-          <span class="more">Read More</span>
-        </a>
-        <a class="sector" href="products.html#corn">
-          <img src="assets/corn.jpg" alt="">
-          <h3>Corn</h3>
-          <p>Corn is a grain as well as a vegetable, and one of the few crops that can be used for hundreds of different things.</p>
-          <span class="more">Read More</span>
-        </a>
-        <a class="sector" href="products.html#chickpeas">
-          <img src="assets/chickpeas.jpg" alt="">
-          <h3>Chickpeas</h3>
-          <p>We have different types of chickpeas, including kabuli chickpeas, black chickpeas and green chickpeas.</p>
-          <span class="more">Read More</span>
-        </a>
-        <a class="sector" href="products.html#pulse">
-          <div class="swatch swatch-dal">DAL</div>
-          <h3>Pulse</h3>
-          <p>North, south, east and west, every Indian kitchen is stocked with pulse, and it is also super healthy.</p>
-          <span class="more">Read More</span>
-        </a>
-        <a class="sector" href="products.html#besan">
-          <div class="swatch swatch-besan">BESAN</div>
-          <h3>Gram Flour</h3>
-          <p>Being such a versatile item, gram flour has found a permanent place in our kitchens.</p>
-          <span class="more">Read More</span>
-        </a>
-        <a class="sector" href="products.html#cattle">
-          <img src="assets/cattle.jpg" alt="">
-          <h3>Cattle Feed</h3>
-          <p>Cattle feed contains protein, energy, minerals and vitamins required for growth.</p>
-          <span class="more">Read More</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-paper">
-    <div class="wrap">
-      <h2 class="section-title">Our Products</h2>
-      <p class="lead">Live mill rates from our price sheet. The list updates when the sheet is updated.</p>
-      <div class="rate-cards" id="rate-cards" data-rates>
-        <p class="rate-note">Loading today's rates…</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap about-band">
-      <div>
-        <h2>Ghanshyam Dall Mill</h2>
-        <p>Ghanshyam Dall Mill is a wheat milling company and manufacturer of agro products in India. Our primary products are wheat, durum wheat semolina, wheat fresh flour, healthy pulses, gram flour, cattle feed, maize, chickpeas, corn and many other products.</p>
-        <a class="btn btn-green" href="about.html">About Us</a>
-      </div>
-      <div class="principles">
-        <article class="principle">
-          <div class="mark">V</div>
-          <div>
-            <h3>Vision</h3>
-            <p>To be a mill that traders and homes trust for clean pulses, flour and feed.</p>
-          </div>
-        </article>
-        <article class="principle">
-          <div class="mark">Va</div>
-          <div>
-            <h3>Values</h3>
-            <p>Quality, consistency and straight dealing in every bag we pack.</p>
-          </div>
-        </article>
-        <article class="principle">
-          <div class="mark">M</div>
-          <div>
-            <h3>Mission</h3>
-            <p>Safe, nutrition-rich products, checked at every stage, without compromising on taste.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-paper" id="write">
-    <div class="wrap contact-grid">
-      <div>
-        <h2 class="section-title" style="text-align:left">Write Us Here</h2>
-        <form id="enquiry-form">
-          <label for="name">Your name</label>
-          <input id="name" name="name" required placeholder="Your name">
-          <label for="phone">Your number</label>
-          <input id="phone" name="phone" required inputmode="tel" placeholder="Your number">
-          <label for="email">Your email</label>
-          <input id="email" name="email" type="email" required placeholder="Your email">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="Message"></textarea>
-          <button class="btn btn-green" type="submit">Send Message</button>
-          <p id="form-status" role="status"></p>
-        </form>
-      </div>
-      <div>
-        <h3>Contact Us</h3>
-        <ul class="contact-list">
-          <li>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
-            <span>14-A, 11-A/1-B, Udyog Nagar, Navlakha, Near Chhawani Anaj Mandi, Indore, Madhya Pradesh 452001</span>
-          </li>
-          <li>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
-            <span>82, New Udyog Agrawal Udyog Nagar, Nemawar Road, Udyog Nagar, Dev Nagar, Indore, Madhya Pradesh 452020</span>
-          </li>
-          <li>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z"/></svg>
-            <span><a href="tel:+917312466977">+91-731 246 6977</a><br><a href="tel:+917312862172">+91-731 286 2172</a></span>
-          </li>
-          <li>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7" fill="none" stroke="#6fbf32" stroke-width="1.6"/></svg>
-            <a href="mailto:contact@ghanshyamdallmill.com">contact@ghanshyamdallmill.com</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonial">
-    <div class="quotes">
-      <div class="quote-nav">
-        <button type="button" data-quote-prev aria-label="Previous testimonial">‹</button>
-        <button type="button" data-quote-next aria-label="Next testimonial">›</button>
-      </div>
-      <blockquote class="quote is-active">
-        <h3>Client View</h3>
-        <p>Very good products with lots of varieties, worth buying. Atta that tastes good and has a lot of fibre in it.</p>
-      </blockquote>
-      <blockquote class="quote">
-        <h3>Client View</h3>
-        <p>Really nice product. It gives a different taste from other well-known products in the market.</p>
-      </blockquote>
-      <blockquote class="quote">
-        <h3>Client View</h3>
-        <p>Good product. Good for digestion. Causes no stomach disorders. Whole grain atta is supposed to be better than the regular one.</p>
-      </blockquote>
-      <blockquote class="quote">
-        <h3>Client View</h3>
-        <p>Excellent product and service. Very friendly service from Ghanshyam Dall Mill.</p>
-      </blockquote>
-      <blockquote class="quote">
-        <h3>Client View</h3>
-        <p>Good fresh product with quality, durability and consistency, without compromising on taste.</p>
-      </blockquote>
-    </div>
-    <div class="testimonial-label"><span>Testimonial</span></div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <h2 class="section-title">Our Certifications</h2>
-      <div class="certs">
-        <a href="contact.html">1st Certificate</a>
-        <a href="contact.html">2nd Certificate</a>
-        <a href="contact.html">3rd Certificate</a>
-        <a href="contact.html">4th Certificate</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <h2 class="section-title">Our Brands</h2>
-      <div class="brands">
-        <div class="badge badge-red">Double Sher<small>डबल शेर</small></div>
-        <div class="badge badge-blue">Double Hathoda<small>डबल हथौड़ा</small></div>
-        <div class="badge badge-green">Golden Coin<small>गोल्डन कॉइन</small></div>
-        <div class="badge badge-gold">Golden Queen<small>गोल्डन क्वीन</small></div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <h3>Ghanshyam Dall Mill</h3>
-        <p>Pulses, besan, wheat products and cattle feed from Udyog Nagar, Indore.</p>
-      </div>
-      <div>
-        <h3>Explore</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Product</a></li>
-          <li><a href="downloads.html">Downloads</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Mill office</h3>
-        <ul>
-          <li><a href="tel:+919893055565">+91-98930-55565</a></li>
-          <li><a href="tel:+919926500065">+91-99265-00065</a></li>
-          <li><a href="mailto:contact@ghanshyamdallmill.com">contact@ghanshyamdallmill.com</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="wrap copy">© <span id="year">2026</span> Ghanshyam Dall Mill. All rights reserved.</div>
-  </footer>
-  <script src="js/main.js"></script>
-  <script src="js/rates.js"></script>
+  </div>
+  <script>
+    (function () {
+      var path = location.pathname.replace(/\/index\.html$/, "");
+      if (path.length > 1 && path.charAt(path.length - 1) === "/") path = path.slice(0, -1);
+      if (!path) path = "/";
+      var mode = "today";
+      var slug = "";
+      if (path === "/history") mode = "history";
+      else if (path.indexOf("/history/") === 0) {
+        mode = "day";
+        slug = decodeURIComponent(path.slice("/history/".length));
+      }
+      window.GDM_PAGE = { mode: mode, slug: slug };
+      var nav = document.querySelector(mode === "today" ? '[data-nav="today"]' : '[data-nav="history"]');
+      if (nav) {
+        nav.classList.add("is-on");
+        nav.setAttribute("aria-current", "page");
+      }
+      if (mode === "today") return;
+      var app = document.getElementById("app");
+      var eyebrow = mode === "history" ? "Rate history" : "Previous rates";
+      var title = mode === "history" ? "Previous lists" : "Reading the sheet…";
+      var eyebrowNode = app.querySelector(".eyebrow");
+      var titleNode = app.querySelector(".dateline-date");
+      if (eyebrowNode) eyebrowNode.textContent = eyebrow;
+      if (titleNode) titleNode.textContent = title;
+      document.title = mode === "history" ? "Rate History — Ghanshyam Dal Mill" : "Ghanshyam Dal Mill — Daily Rates";
+    })();
+  </script>
+  <script src="/js/app.js"></script>
 </body>
 </html>
